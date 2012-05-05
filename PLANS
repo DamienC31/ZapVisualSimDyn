@@ -1,0 +1,13 @@
+Free Reign Development
+======================
+
+The development strategy is as follows, in order of priority highest to
+lowest.
+
++ Finish toolbox
++ Develop and implement economy model
++ Design better models and a loader for them
++ Design a LOD algorithm for speedups
++ Investigate more HSR
++ Implement "ore" in cells, and mines/mining structures (hence income,jobs)
++ Multiplayer - neighbouring cities, wars, trade, etc.

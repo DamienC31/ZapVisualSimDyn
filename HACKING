@@ -1,0 +1,110 @@
+Hacking Free Reign
+==================
+
+Following is an outline of the functionality of each source file in this
+distribution.
+
+UInterface.cpp 
+==============
+The user interface for Free Reign. Handles things like mouse pointer
+positioning in the world, input from the toolbox, keyboard input
+
+
+main.cpp
+========
+Initialises the world.  Doesn't do much else.  You can set the size of the
+map in this file at the moment, but this will change in future releases as
+it will become a menu option
+
+
+powersim.cpp
+============
+The power subsystem simulator.  Basically it has a vector of all power
+supplying objects in the system, and sets of the conductivity of each
+cell.
+
+
+user.cpp
+========
+Contains information about the "God" of the world, stuff like current
+funds etc.
+
+
+button.cpp
+==========
+Part of the button bar, contains the stuff for a toolbox button, like
+texture, the call back function...
+
+
+maths.cpp
+=========
+Miscellaneous maths stuff like normal calculation etc..
+
+
+render.cpp
+==========
+The main rendering class.  Handles line drawing, structure drawing,
+terrain drawing..
+
+
+vertex2D.cpp
+============
+A 2D vertex implementation
+
+buttonbar.cpp
+=============
+The rest of the button bar class, contains references to all the buttons
+in the toolbox and their parents.
+
+microsim.cpp
+============
+The micro simulator base class.  All microsimulators are derived from this
+class.
+
+
+residsim.cpp
+============
+The residential simulator - handles allocating residential buildings to
+squares of that zone, residential economics, population etc..
+
+
+vertex3D.cpp
+============
+A standard 3D vertex
+
+cell.cpp
+========
+A map cell, contains references to structures, parameters etc.  Also
+handles transmission of electricity to adjacent cells.
+
+misc.cpp
+========
+Miscellaneous functions that can't go elsewhere
+
+structure.cpp
+=============
+The 3D description of a building, it's parameters etc..
+
+vertex3Dp.cpp
+=============
+A 3D vertex containing pointers to floats, used for the map.
+
+face.cpp 
+========
+A standard polygon class.
+
+
+parameter.cpp  
+=============
+The parameter class, used everywhere to describe stuff.  This needs an
+overhaul as it is slow as all hell.
+
+
+texture.cpp   
+===========
+A GL texture container.
+
+
+world.cpp
+=========
+The world class.  Contains the map, the user, and the user interface

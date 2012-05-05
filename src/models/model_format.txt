@@ -1,0 +1,50 @@
+Model Format
+------------
+
+This model format is only temporary until we can get some real models
+into the game.  To do this, I need to write a loader for some model file
+type (looks like it will be dxf files, exported by blender), and then a 
+separate tool for compacting the text files into a .stash file.
+The parameter format will remain current.
+
+The current text format is as follows.
+It is in pseudo-bnf style.
+
+<FR> <FG> <FB> //The global RGB components of the model faces
+<VERTEX> //The start of the vertex section
+<NUM_VERTS> //Number of vertices
+<X> <Y> <Z> //X,Y,Z compoent
+
+<FACE> //Start of the face section
+<NUM_FACES> //Number of faces
+<NUMBER_SIDES> <TYPE> <V1> <V2> <Vn>
+    ^            ^     ^
+    |            |     | 
+    |            |     - The reference of this vertex.  Indexed from 0.
+    |            - The type of this face (2=line,3=tri,4=quad)
+    -Number of vertices in this face
+
+<PARAMETERS> //The start of the parameters section
+<NUM_PARAMETERS> //Number of parameters for this model
+<NAME> <VALUE> //The name of the parameter, followed by its value
+
+
+Common Parameters
+-----------------
+
+SIZE NxN
+ - The size in squares of the model.  
+
+POWER_USAGE N
+ - The power consumption (in kW) of this building
+
+CONDUCTIVE {1|0}
+ - Whether this model conducts power or not
+
+MICROSIM N
+ - The microsimulator associated with this model
+
+Note
+----
+No parameters are necessary for any model, though some are expected for 
+correct operation of the game

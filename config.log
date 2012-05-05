@@ -1,0 +1,74 @@
+This file contains any messages produced by compilers while
+running configure, to aid debugging if configure makes a mistake.
+
+configure:564: checking whether make sets ${MAKE}
+configure:593: checking for gcc
+configure:706: checking whether the C compiler (gcc  ) works
+configure:722: gcc -o conftest    conftest.c  1>&5
+configure:748: checking whether the C compiler (gcc  ) is a cross-compiler
+configure:753: checking whether we are using GNU C
+configure:781: checking whether gcc accepts -g
+configure:813: checking for POSIXized ISC
+configure:864: checking for a BSD compatible install
+configure:917: checking whether ln -s works
+configure:939: checking whether build environment is sane
+configure:1015: checking for working aclocal
+configure:1028: checking for working autoconf
+configure:1041: checking for working automake
+configure:1054: checking for working autoheader
+configure:1067: checking for working makeinfo
+configure:1081: checking whether to enable maintainer-specific portions of Makefiles
+configure:1107: checking for gcc
+configure:1220: checking whether the C compiler (gcc -g -O2 ) works
+configure:1236: gcc -o conftest -g -O2   conftest.c  1>&5
+configure:1262: checking whether the C compiler (gcc -g -O2 ) is a cross-compiler
+configure:1267: checking whether we are using GNU C
+configure:1295: checking whether gcc accepts -g
+configure:1327: checking how to run the C preprocessor
+configure:1411: checking for c++
+configure:1443: checking whether the C++ compiler (c++  ) works
+configure:1459: c++ -o conftest    conftest.C  1>&5
+configure:1485: checking whether the C++ compiler (c++  ) is a cross-compiler
+configure:1490: checking whether we are using GNU C++
+configure:1518: checking whether c++ accepts -g
+configure:1550: checking how to run the C++ preprocessor
+configure:1593: checking whether build environment is sane
+configure:1643: checking for getc in -lstdc++
+configure:1695: checking for vector
+configure:1730: checking for string
+configure:1776: checking for X
+configure:2090: checking for dnet_ntoa in -ldnet
+configure:2131: checking for dnet_ntoa in -ldnet_stub
+configure:2179: checking for gethostbyname
+configure:2277: checking for connect
+configure:2369: checking for remove
+configure:2461: checking for shmat
+configure:2562: checking for IceConnectionNumber in -lICE
+configure:2607: checking for working const
+configure:2685: checking for stdio.h
+configure:2718: checking for stdlib.h
+configure:2750: checking for ANSI C header files
+configure:2865: checking for X
+configure:3179: checking for dnet_ntoa in -ldnet
+configure:3220: checking for dnet_ntoa in -ldnet_stub
+configure:3268: checking for gethostbyname
+configure:3366: checking for connect
+configure:3458: checking for remove
+configure:3550: checking for shmat
+configure:3651: checking for IceConnectionNumber in -lICE
+configure:3706: checking for XOpenDisplay in -lX11
+configure:3749: checking for XShmAttach in -lXext
+configure:3833: checking for IceSetIOErrorHandler in -lICE
+configure:3875: checking for SmcClientID in -lSM
+configure:3917: checking for XtDisplayToApplicationContext in -lXt
+configure:3959: checking for XmuLookupStandardColormap in -lXmu
+configure:4002: checking for XOpenDevice in -lXi
+configure:4055: checking for floor in -lm
+configure:4123: checking GL
+configure:4133: gcc -o conftest -g -O2       conftest.c -lm -lstdc++    -lX11 -lXext -lICE -lSM -lXt -lXmu -lXi -lGL 1>&5
+configure:4183: checking GLU
+configure:4193: gcc -o conftest -g -O2       conftest.c -lm -lstdc++    -lX11 -lXext -lICE -lSM -lXt -lXmu -lXi -lGL -lGLU 1>&5
+configure:4214: checking for glutSwapBuffers in -lglut
+configure:4263: checking for GL/glut.h
+configure:4299: checking for GL/gl.h
+configure:4333: checking for GL/glu.h

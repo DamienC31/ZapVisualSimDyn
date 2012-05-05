@@ -1,0 +1,3 @@
+conpos.o: conpos.cpp console.h
+conpos.cpp :
+console.h :

@@ -1,0 +1,32 @@
+
+F R E Q U E N T L Y
+        A S K E D 
+            Q U E S T I O N S
+=============================
+
+
+This is more of a coding FAQ than anything else....
+
+
+
+Q1. Why don't I use GL vertex arrays for the map drawing?
+
+	Whilst very good, the vertex array system would be cumbersome in 
+this case.  If you look in render.cpp, you'll see that we draw the
+polygons in runs - i.e. if there are no terrain changes for 20 cells in a
+straight line, we draw that as one big rectangle (or more correctly, 2 big
+triangles).  Where as with vertex arrays we'd still be drawing all the
+polygons seperately- and lose speed. For example, on a flat map (best case
+for this algorithm) on a 100x100 map, we draw 200 polygons (100 rowsx2
+tris).  Using vertex arrays, we'd draw 10000 - see?
+
+
+Q2. What rules do/will the residential/commercial/industrial simulators
+follow?
+
+	The residential simulator will only allow a house to build if it's
+near a road that goes somewhere (i.e. to an industrial or commercial
+estate).  The square must also be powered, and the road must be no more
+than 2 cells away.  Nearby facilities such as parks, etc, increase the
+chance of building and land values.
+

@@ -1,0 +1,156 @@
+30/7/2001 - 00:23
+(LordChaos)
+
+- Bug fix in getMinHeight/Max - ugh.  How did I ever forget that?
+  My last C++ compiler must have assumed I was returning height..my God.
+
+30/11/2000 - 01:20
+(LordChaos)
+
+- Looks like all the microsim management is going to go threaded 
+  tomorrow.  Had to happen, and I hope it doesn't encourage sloppy coding.
+  I'm going to speed up and properly plan the current algos before
+  threading them.
+
+29/11/2000 - 21:13
+(LordChaos)
+
+- Major speedup in rendering code.  Still needs a bit of debugging
+- Ran the code through a profiler for the first time.  Hmm.
+
+
+28/11/2000 - 14:55
+(LordChaos)
+
+- Made the hill bevel smaller, more believable
+- More work on the residential simulator, so they only build near roads 
+  (going to make this so they only build near roads that *go* somewhere.
+- Done roads
+
+27/11/2000 - 15:03
+(LordChaos)
+
+- Added the user class, to keep track of funds etc...
+- Thought about multi-threading
+
+
+26/11/2000 - 15:21
+(LordChaos)
+
+- Finished the routing work!! Power lines work flawlessly
+- Found a bug - can't build on a 45 deg angle tile > 4 tiles up...
+  gotta be a floating point problem in cell.cpp but it's not that urgent right now
+
+25/09/2000 - 00:49
+(LordChaos)
+
+- More routing work.  The new system is now in place, and works
+  Just got to do the t-intersections for the powerlines
+  Quite exciting actually, because with this new system, the backbone
+  for powerlines, roads, highways, train tracks - is all in place
+  All we need is some models :)
+- More optimisation work.
+- Lighting! Finally, looks quite good too.
+
+
+11/09/2000 - 17:59
+(LordChaos)
+
+- Started work again.  Created the residential simulator, for housing
+  management.  Needs a lot of work.
+- Planned the rewrite of the routing code (power lines, roads etc) - it's
+  really kludgy, needs fixing.
+- Created the render class, moved all the drawing code from world.cppw
+
+
+07/10/2000 - 22:10
+(LordChaos)
+
+- Fixed a bug in the toolbar
+
+07/08/2000 - 15:50
+(LordChaos)
+
+- Finished work on the toolbar structure.  Must make it more generic
+
+
+07/08/2000 - 11:45
+(LordChaos)
+
+- More toolbox work.  Implemented triangle strips (speedup) TODO
+  fix color bleeding
+
+07/06/2000 - 00:26
+(LordChaos)
+
+- Implemented the button bar
+- Imported the texture class from my old globs project
+
+
+07/05/2000 - 14:00
+(LordChaos)
+
+- Work on toolbox and buttons (using callbacks)
+- Thought about the rewrite of the routing code to make it cleaner and more
+  generic
+
+07/04/2000 - 00:34
+(LordChaos)
+
+- Bit of microsim work
+- Changed the model format, worked out the stuff for routing (i.e. lines,
+  roads etc..)
+
+
+07/02/2000 - 16:50
+(LordChaos)
+
+- Now each building has references passed to all it's cells
+- First work on microsimulators
+- Made an attempt to use current models on angled tiles, decided
+  on a better implementation though.
+
+07/02/2000 - 00:44
+(LordChaos)
+
+- Set up a function in world.cpp to actually place structures
+  properly to prevent writing over of structures and so cells
+  know the owner of the structure on top of them
+- More work on the power interface
+
+06/30/2000 - 14:12
+(LordChaos)
+
+- Created the most of the power line infrastructure
+  and the power conductivity stuff.  Works well too.
+
+
+06/27/2000 - 18:20
+(LordChaos)
+
+- Implemented the lower terrain tool
+- Extended the zone tool for industrial
+- First work on structures (yay! buildings!)
+- Created the "face" (polygon) and structural parameter classes
+
+06/27/2000 - 00:10
+(LordChaos)
+
+- Fixed the ray shooting algorithm to be almost perfect
+- Early work on face (polygon) class to enable work on structure class
+- Version 0.0.1 released
+
+06/26/2000 - 00:42
+(LordChaos)
+
+- Plugged all the previous tech (like the ray shooting algorithms) into the
+  main version from the proof of concept.
+- Got basic view working (i.e. squares/line display)
+
+06/06/2000 - 22:57
+(LordChaos)
+
+- Stopped work on speeding up the proof of concept.  Began work on the initial
+  structure of the final version.
+- Laid out some base classes.
+
