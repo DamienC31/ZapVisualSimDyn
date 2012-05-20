@@ -28,7 +28,7 @@
 #ifndef __CONSOLE__
 #define __CONSOLE__
 typedef float conf_t;
-typedef conf_t conf2_t[2];
+typedef float conf2_t[2];
 typedef conf_t conf3_t[3];
 
 // Used for conState and buffer scrolling in the console_t structure

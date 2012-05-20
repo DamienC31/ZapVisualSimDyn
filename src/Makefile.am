@@ -36,4 +36,4 @@ LDADD= \
 LDFLAGS=-pg
 
 INCLUDES = \
-  $(X_CFLAGS) -O2 -i -pg
+  $(X_CFLAGS) -O2 -pg

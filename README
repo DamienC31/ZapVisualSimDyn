@@ -1,12 +1,12 @@
-            ==============================================================
+==============================================================
+Z A P    V I S U A L    S I M    D Y N
+Based on F R E E    R E I G N
+==============================================================
 
-                  F     R     E     E         R     E    I    G    N
-       
-            ==============================================================
 
 Installation
 ------------
-Do not install the game at the current time, just run it out of the 
+Do not install the game at the current time, just run it out of the
 source directory.
 This will be addressed in future releases
 
@@ -21,6 +21,7 @@ What Works (tm)
 * Basic toolbox
 * Basic micro-simulators
 
+
 What's coming
 -------------
 * Many more models for buildings
@@ -33,55 +34,51 @@ What's coming
 Controls
 --------
 A toolbox is in place.  Click on the toolbox buttons to get the submenus.
-Some toolbox commands are not in place yet.  Try these keys..
+Some toolbox commands are not in place yet.  Try these keys...
 
-	u = Raise terrain (hold left mouse down and drag)
-	d = Lower terrain (same as above)
-	l = Level Terrain (same)
-	r = Zone residential (drag box)
-	c = Zone commercial (drag box)
-	i = Zone industrial (drag box)
-	x = Dezone (drag box)
-	k = Destroy building
+    u = Raise terrain (hold left mouse down and drag)
+    d = Lower terrain (same as above)
+    l = Level Terrain (same)
+    r = Zone residential (drag box)
+    c = Zone commercial (drag box)
+    i = Zone industrial (drag box)
+    x = Dezone (drag box)
+    k = Destroy building
+    p = Place power line (Click and drag)
+    t = Place Road (As above)
 
-	p = Place power line (Click and drag)
-	t = Place Road (As above)
-
-	View Controls
-	-------------
-		[ = Rotate left
-		] = Rotate right
-		- = zoom in
-		= = zoom out
-		8 (Num Pad) - Move forward
-		2 (Num PaD) - Move back
+    View Controls
+    -------------
+        [ = Rotate left
+        ] = Rotate right
+        - = zoom in
+        = = zoom out
+        8 (Num Pad) - Move forward
+        2 (Num PaD) - Move back
 
 
 Features
 --------
-	. Crashes on demand
-	. OpenGL based graphics
-	. Fully 3D (rotateable map etc)
+    . Crashes on demand
+    . OpenGL based graphics
+    . Fully 3D (rotateable map etc)
+
 
 Playing
 -------
-	Houses/Etc will build if they are < 2 tiles from a road and powered.
-	The big blue cube in the middle of the map is a power plant.  You
-can't build those at the moment (working on it).
-	Have fun...
+    Houses/Etc will build if they are < 2 tiles from a road and powered.
+    The big blue cube in the middle of the map is a power plant.  You
+    can't build those at the moment (working on it).
+    Have fun...
 
 
 BUGS - Priority top (high) to bottom (low)
 ------------------------------------------
-
-	. Rendering bug.  If a zone tile is behind a slope in the rendering 
-	  direction, rendering will screw up.  This was a casualty of my new
-	  rendering design.  Fix coming soon.
-	. A Tile is not selected sometimes if it is sloped and the mouse
-	  pointer is aimed at the top half of it.  Algo needs work
-
-
-
+    . Rendering bug.  If a zone tile is behind a slope in the rendering
+      direction, rendering will screw up.  This was a casualty of my new
+      rendering design.  Fix coming soon.
+    . A Tile is not selected sometimes if it is sloped and the mouse
+      pointer is aimed at the top half of it.  Algo needs work
 
 Alex(LordChaos Taylor
 ICQ 886428
@@ -90,22 +87,37 @@ ICQ 886428
 
 Installer et compiler cette version de Free Reign 0.2.1 :
 
-Dans configure et configure.in :
-  remplacer vector.h par vector (vector.h est deprécié)
+Pour générer le Makefile :
 
-Installer la librarie X11 :
+- Installez les paquets suivants :
+sudo apt-get install autoscan
+sudo apt-get install autoconf
+
+- Pour générer le Makefile à partir des fichiers configure.ac et Makefile.am :
+aclocal
+autoconf
+automake -a -c
+automake --add-missing
+
+Pour compiler le programme :
+./configure
+cd src/
+make
+
+Pour lancer le programme :
+./fr
+
+Exemples de paquets à installer pour compiler le programme sous une
+distribution Ubuntu fraichement installée :
+
+- installer la librarie X11 :
   sudo apt-get install x11proto-print-dev
   sudo apt-get install libxt-dev
-
-Carte en couleur
+- carte en couleur :
   sudo apt-get install libxmu-dev
-
-Installer OpenGl
+- installer OpenGl :
   sudo apt-get install libgl1-mesa-dev
   sudo apt-get install libglu1-mesa-dev
   sudo apt-get install libghc6-glut-dev
 
-Type ./configure in the FreeReign directory
-Type make when configure succeeds. or cd src then make
-Change to the src directory
-Type ./fr to run the game
+DamienC31
