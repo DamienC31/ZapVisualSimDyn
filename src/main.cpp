@@ -39,6 +39,7 @@ GLuint setupColor(float,float,float);
 void motion(int x, int y);
 void passivemotion(int,int);
 void keyboardFunc(unsigned char, int,int);
+void specialKeyboardFunc(int key, int x, int y);
 void mouseFunc(int,int,int,int);
 void idleFunc();
 
@@ -175,6 +176,7 @@ int main(int argc, char **argv)
 	glutMotionFunc(motion);
 	glutMouseFunc(mouseFunc);
 	glutKeyboardFunc(keyboardFunc);
+    glutSpecialFunc(specialKeyboardFunc);
 	glutIdleFunc(idleFunc);
 
 	
@@ -238,6 +240,11 @@ void motion(int x, int y)
 void keyboardFunc(unsigned char key, int x, int y)
 {
 	simulator->getUI()->keyboardFunc(key,x,y,con.conState);
+	glutPostRedisplay();
+}
+
+void specialKeyboardFunc(int key, int x, int y) {
+    simulator->getUI()->specialKeyboardFunc(key,x,y,con.conState);
 	glutPostRedisplay();
 }
 

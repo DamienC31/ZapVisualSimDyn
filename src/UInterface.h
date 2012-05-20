@@ -26,6 +26,7 @@ class UInterface {
 		void passiveMotionFunc(int x, int y);
 		void motionFunc(int,int);
 		void keyboardFunc(unsigned char,int,int, int);
+		void specialKeyboardFunc(unsigned char,int,int, int);
 		void mouseFunc(int,int,int,int);
 
 		//The Mouse cursor stuff

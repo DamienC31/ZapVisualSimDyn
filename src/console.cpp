@@ -99,7 +99,7 @@ int consoleGetCommandNum (void)
 	applications redraw function. "fn" and "bn" are font file and background 
 	file names respectively.  "fid" and "bid" are texture ids/  
 */
-void consoleInit (console_t *p, int w, int h, void (*function) (void), char *fn, int fid, char *bn, int bid)
+void consoleInit (console_t *p, int w, int h, void (*function) (void), char fn[], int fid, char bn[], int bid)
 {
 	p->winW = w;
 	p->winH = h;

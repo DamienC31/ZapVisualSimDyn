@@ -64,7 +64,7 @@ UInterface::UInterface(world* par)
 }
 
 
-//========================================================
+//=========================================================
 //Toolbox functions
 void UInterface::showTerrainFunc()
 {
@@ -132,7 +132,7 @@ void UInterface::checkButtons(int x, int y)
 {
 	toolbox->checkButtons(x,y);		
 }	
-//===================================================================
+//=========================================================
 
 
 int UInterface::getPickX()
@@ -179,7 +179,7 @@ bool UInterface::isSelecting()
 }
 
 
-//==================================================
+//=========================================================
 void UInterface::passiveMotionFunc(int x, int y)
 {
    if (x < WIDTH-TOOLBOX_WIDTH) {
@@ -248,7 +248,7 @@ void UInterface::passiveMotionFunc(int x, int y)
 
 
 
-//===========================================================
+//=========================================================
 void UInterface::motionFunc(int x, int y)
 {
   //This stuff should be moved to world...
@@ -284,7 +284,7 @@ void UInterface::motionFunc(int x, int y)
 
 
 
-//=======================================================
+//=========================================================
 void UInterface::keyboardFunc(unsigned char key, int x, int y, int console)
 {
     cout << "Key: " << key << endl;
@@ -395,12 +395,41 @@ void UInterface::keyboardFunc(unsigned char key, int x, int y, int console)
         	parent->setLookZ( parent->getLookZ() - (float)cos(parent->getRotate()*PI/180) *0.3f);
 		parent->setRotate(parent->getRotate()); //Update positions
 		break;
-
-
-
    }
 }
 
+//=========================================================
+// SPECIAL ARROW KEYS
+void UInterface::specialKeyboardFunc(unsigned char key, int x, int y, int console)
+{
+    // Add the arrow keys
+    switch (key) {
+        case GLUT_KEY_DOWN:
+            cout << "Fleche bas" << endl;
+            parent->setLookX( parent->getLookX() + (float)sin(parent->getRotate()*PI/180) *0.3f);
+            parent->setLookZ( parent->getLookZ() + (float)cos(parent->getRotate()*PI/180) *0.3f);
+            parent->setRotate(parent->getRotate()); //Update positions
+            break;
+        case GLUT_KEY_UP:
+            cout << "Fleche haut" << endl;
+            parent->setLookX( parent->getLookX() - (float)sin(parent->getRotate()*PI/180) *0.3f);
+        	parent->setLookZ( parent->getLookZ() - (float)cos(parent->getRotate()*PI/180) *0.3f);
+            parent->setRotate(parent->getRotate()); //Update positions
+            break;
+       case GLUT_KEY_LEFT:
+            cout << "Fleche gauche" << endl;
+            parent->setLookX( parent->getLookX() - (float)sin(parent->getRotate()*PI/180) *0.3f);
+        	parent->setLookZ( parent->getLookZ() + (float)cos(parent->getRotate()*PI/180) *0.3f);
+            parent->setRotate(parent->getRotate()); //Update positions
+            break;
+       case GLUT_KEY_RIGHT:
+            cout << "Fleche droite" << endl;
+            parent->setLookX( parent->getLookX() + (float)sin(parent->getRotate()*PI/180) *0.3f);
+        	parent->setLookZ( parent->getLookZ() - (float)cos(parent->getRotate()*PI/180) *0.3f);
+            parent->setRotate(parent->getRotate()); //Update positions
+            break;
+    }
+}
 
 //=========================================================
 void UInterface::mouseFunc(int button, int state, int x, int y)

@@ -101,7 +101,7 @@ typedef struct
 #endif
 
 //  User calls
-void consoleInit (console_t *p, int w, int h, void (*function) (void), char *fn, int fid, char *bn, int bid);
+void consoleInit (console_t *p, int w, int h, void (*function) (void), char fn[], int fid,  char bn[], int bid);
 void consoleBufferAdd (console_t *p, char *s, ...);
 void consoleClearBuffers (console_t *p);
 void consoleHistoryRecall (console_t *p);
