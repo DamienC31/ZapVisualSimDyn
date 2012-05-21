@@ -428,6 +428,22 @@ void UInterface::specialKeyboardFunc(unsigned char key, int x, int y, int consol
         	parent->setLookZ( parent->getLookZ() - (float)cos(parent->getRotate()*PI/180) *0.3f);
             parent->setRotate(parent->getRotate()); //Update positions
             break;
+        case GLUT_KEY_PAGE_UP:
+            cout << "Zoom" << endl;
+            if (parent->getCamY() >= 4.0f) {
+                parent->setCamY(parent->getCamY()- 0.3f);
+                parent->setLookY(parent->getLookY() - 0.3f);
+                parent->setRotate(parent->getRotate()); //Update positions
+            }
+            break;
+        case GLUT_KEY_PAGE_DOWN:
+            cout << "DeZoom" << endl;
+            if (parent->getCamY() <= 15.0f) {
+                parent->setCamY(parent->getCamY() + 0.3f);
+                parent->setLookY(parent->getLookY() + 0.3f);
+                parent->setRotate(parent->getRotate()); //Update positions
+            }
+            break;
     }
 }
 
